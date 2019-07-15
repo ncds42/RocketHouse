@@ -1,0 +1,11 @@
+.blogPostTitle {
+  text-decoration: underline;
+  text-align: center; }
+
+h5.blogPostPublishedDate {
+  text-align: center; }
+
+img.img-responsive {
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem; }

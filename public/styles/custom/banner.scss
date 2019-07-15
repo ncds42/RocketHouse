@@ -1,0 +1,57 @@
+$banner-height:10rem;
+
+.navbar{
+	margin-bottom:40px;
+}
+
+.banner {
+	margin: 0px;
+	height: $banner-height+2;
+	margin-left:15px;
+	margin-right:15px;
+	// background-color:rgba(202, 235, 242, 0.897);
+	// background-color:#fafde8;
+}
+
+.bannerMobile {
+	display: none;
+	margin-bottom: 10px;
+}
+
+img#heart {
+	height: $banner-height - 1;
+	top: 1rem;
+	width: 10rem;
+	position: absolute;
+}
+
+.headerTitle {
+	height: $banner-height;
+	display: block;
+	text-align: center;
+}
+
+img#headerTitle {
+	height: $banner-height - 3;
+	margin: 2rem;
+}
+
+@media(max-width:1000px) {
+
+	// Heart Dissapear
+	img#heart {
+		display: none;
+	}
+}
+
+@media(max-width:700px) {
+
+	// MOBILE
+	.banner {
+		display: none;
+	}
+
+	.bannerMobile {
+		display: block;
+	}
+}

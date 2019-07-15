@@ -1,0 +1,14 @@
+.aboutHeader {
+  text-align: center; }
+
+.aboutContent {
+  font-family: 'Libre Baskerville', sans-serif;
+  text-indent: 20px; }
+
+.karimPhoto {
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  border: 15px inset #e25151;
+  padding: 2px; }

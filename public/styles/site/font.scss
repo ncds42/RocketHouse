@@ -1,0 +1,63 @@
+@font-face {
+	font-family: 'Khand';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/khand-v7-latin/khand-v7-latin-300.eot');
+	src: local('Khand Light'), local('Khand-Light'), url('../fonts/khand-v7-latin/khand-v7-latin-300.eot?#iefix') format('embedded-opentype'), url('../fonts/khand-v7-latin/khand-v7-latin-300.woff2') format('woff2'), url('../fonts/khand-v7-latin/khand-v7-latin-300.woff') format('woff'), url('../fonts/khand-v7-latin/khand-v7-latin-300.ttf') format('truetype'), url('../fonts/khand-v7-latin/khand-v7-latin-300.svg#Khand') format('svg');
+}
+
+@font-face {
+	font-family: 'Khand';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/khand-v7-latin/khand-v7-latin-regular.eot');
+	src: local('Khand Regular'), local('Khand-Regular'), url('../fonts/khand-v7-latin/khand-v7-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/khand-v7-latin/khand-v7-latin-regular.woff2') format('woff2'), url('../fonts/khand-v7-latin/khand-v7-latin-regular.woff') format('woff'), url('../fonts/khand-v7-latin/khand-v7-latin-regular.ttf') format('truetype'), url('../fonts/khand-v7-latin/khand-v7-latin-regular.svg#Khand') format('svg');
+}
+
+@font-face {
+	font-family: 'Khand';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/khand-v7-latin/khand-v7-latin-500.eot');
+	src: local('Khand Medium'), local('Khand-Medium'), url('../fonts/khand-v7-latin/khand-v7-latin-500.eot?#iefix') format('embedded-opentype'), url('../fonts/khand-v7-latin/khand-v7-latin-500.woff2') format('woff2'), url('../fonts/khand-v7-latin/khand-v7-latin-500.woff') format('woff'), url('../fonts/khand-v7-latin/khand-v7-latin-500.ttf') format('truetype'), url('../fonts/khand-v7-latin/khand-v7-latin-500.svg#Khand') format('svg');
+}
+
+@font-face {
+	font-family: 'Khand';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/khand-v7-latin/khand-v7-latin-600.eot');
+	src: local('Khand SemiBold'), local('Khand-SemiBold'), url('../fonts/khand-v7-latin/khand-v7-latin-600.eot?#iefix') format('embedded-opentype'), url('../fonts/khand-v7-latin/khand-v7-latin-600.woff2') format('woff2'), url('../fonts/khand-v7-latin/khand-v7-latin-600.woff') format('woff'), url('../fonts/khand-v7-latin/khand-v7-latin-600.ttf') format('truetype'), url('../fonts/khand-v7-latin/khand-v7-latin-600.svg#Khand') format('svg');
+}
+
+@font-face {
+	font-family: 'Khand';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/khand-v7-latin/khand-v7-latin-700.eot');
+	src: local('Khand Bold'), local('Khand-Bold'), url('../fonts/khand-v7-latin/khand-v7-latin-700.eot?#iefix') format('embedded-opentype'), url('../fonts/khand-v7-latin/khand-v7-latin-700.woff2') format('woff2'), url('../fonts/khand-v7-latin/khand-v7-latin-700.woff') format('woff'), url('../fonts/khand-v7-latin/khand-v7-latin-700.ttf') format('truetype'), url('../fonts/khand-v7-latin/khand-v7-latin-700.svg#Khand') format('svg');
+}
+
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.eot');
+	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.woff2') format('woff2'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.woff') format('woff'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.ttf') format('truetype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-regular.svg#LibreBaskerville') format('svg');
+}
+
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.eot');
+	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.woff2') format('woff2'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.woff') format('woff'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.ttf') format('truetype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-italic.svg#LibreBaskerville') format('svg');
+}
+
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.eot');
+	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.eot?#iefix') format('embedded-opentype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.woff2') format('woff2'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.woff') format('woff'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.ttf') format('truetype'), url('../fonts/libre-baskerville-v6-latin/libre-baskerville-v6-latin-700.svg#LibreBaskerville') format('svg');
+}

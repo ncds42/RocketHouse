@@ -1,0 +1,22 @@
+:root {
+	box-sizing: border-box;
+	--ratio: 1.5px;
+	-webkit-font-smoothing:antialiased;
+	-webkit-font-smoothing:subpixel-antialiased;
+	-moz-osx-font-smoothing:auto;
+	font-size:10px;
+}
+
+body {
+	font-family: 'Libre Baskerville', serif;
+	
+}
+
+.container {
+
+}
+
+.container-fluid {
+	margin-left:15px;
+	margin-right:15px;
+}

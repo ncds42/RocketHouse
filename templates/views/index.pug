@@ -1,0 +1,90 @@
+extends ../layouts/default
+
+mixin post(post)
+	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+		h2: a(href='/blog/post/' + post.slug)= post.title
+		p#publishedDate Posted 
+			if post.publishedDate
+				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+		if post.image.exists
+			img(src=post._.image.fit(400,400)).img.pull-right
+		p!= post.content.brief
+		if post.content.extended
+			p.read-more: a(href='/blog/post/' + post.slug) Read more...
+
+block content
+	.container-fluid: .jumbotron 
+		.display
+			img#bookCover(src="/images/cover.png")
+			div#bookContent
+					span#bookTitle1.bookTitle Marriage Advice 
+					span#bookTitle2.bookTitle from a 
+					span#bookTitle3.bookTitle DIVORCED GUY
+					hr(style="margin-top:0px;")
+					p.bookDescription. 
+						How is your marriage?
+					p.bookDescription.
+						Is it the stuff of legends? Or is your love barely hanging on amid the negative forces pulling it apart? Do your neighbors wink and say, “Give them a year”? Are you heading towards divorce?
+						This book will help you tame the monsters challenging your marriage and your love life. The advice given here will turn your love affair into the unimaginable, and will empower you to revel in a fulfilling and enduring love.
+						First things first: We must address the (Insert huge animal here) in the room. You may have looked at the cover of this book and said, “Right. Why should I take marriage advice from a divorced guy?”
+						Yes, I am a divorced guy whose marriage lasted 16 years. Yes, I have been single since 2001. Yes, I have had three or four committed relationships, exact number escapes me. And yes, on occasion I sleep with laundry and eat over the sink.
+						You did that while we were married. Karim’s Ex-Wife here. 
+					p.bookDescription.
+						You’ll see my notes shaded in gray. Not my choice, but apparently I don’t make all the decisions here, even though I should.
+						Love has been on the run and tough to grasp, but I have garnered much wisdom through the twists and turns along my journey. I say wisdom because men will appreciate the term, while most women will say, “If he’s so wise, why is he divorced?”
+					a#linkToBook.read-more Read More
+					hr
+		.container-fluid#buyBookContainer
+			form#buyBookForm(
+					action="https://www.amazon.com/Marriage-Advice-Divorced-Guy-Ex-Wife/dp/1733130500/ref=sr_1_4?crid=9L8GXH544A1O&keywords=marriage+advice+from+a+divorced+guy&qid=1562484121&s=gateway&sprefix=marriage+advice+from%2Caps%2C158&sr=8-4"
+					method="post"
+					target="_blank"
+				)
+
+				input#buyBook(type="submit" value="BUY \"DIVORCED GUY\"")
+		hr(style="border-width:2px;margin-top:70px;")
+		.container-fluid#blogContainer
+			#blogContentContainer
+				-latestPost = data.posts.results[0];
+				.latestPostHeader.blogPostHeader LATEST POST
+				.contentWrapper
+					div
+						a.postTitle.content(href='/blog/post/'+latestPost.slug)= latestPost.title
+					p.postPublishedDate.content= latestPost._.publishedDate.format('MMMM Do, YYYY')
+					img.latestPostImage.content(src=latestPost._.image.fit(400,400))
+					p.blogContent.content= latestPost.content.brief
+						a#blogContinue.read-more.content(
+							href="/blog/post/"+latestPost.slug
+						) ...read more
+			#otherContainer
+				#recentPosts
+					.recentPostHeader.blogPostHeader RECENT POSTS
+					each post, i in data.posts.results
+						if(i > 0)
+							if (i==1)
+								a.recentPostLinks#firstRecentPost(
+									href='/blog/post/'+post.slug)= post.title
+								hr
+							else if (i < 6)
+								a.recentPostLinks(
+									href='/blog/post/'+post.slug)= post.title
+								hr
+				#signUpContainer
+					.subscribeContainer
+						form(action='https://tinyletter.com/Karimsb-4'
+							method='POST'
+							target='popupwindow'
+							onsubmit="window.open('https://tinyletter.com/Karimsb-4', 'popupwindow', 'scrollbars=yes,background-color:white,width=800,height=600');return true")
+							div.header
+								h2.subscribe SUBSCRIBE
+								p.signUpHeader Sign up with your email to receive advice and free, awesome, goodies
+								.emailInputDiv
+									label.emailLabel
+									input.emailInput(
+										type="text"
+										placeholder="  Email Address")
+									input.submit(
+										type="submit"
+										value="SIGN UP"
+									)
+								.signUpButtonDiv
