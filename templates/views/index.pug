@@ -43,7 +43,7 @@ block content
 
 				input#buyBook(type="submit" value="BUY \"DIVORCED GUY\"")
 		hr(style="border-width:2px;margin-top:70px;")
-		if data.posts.exists
+		if data.posts.results.length
 			.container-fluid#blogContainer
 				#blogContentContainer
 					-latestPost = data.posts.results[0];
