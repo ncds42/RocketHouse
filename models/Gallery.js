@@ -11,7 +11,7 @@ var Gallery = new keystone.List('Gallery', { //  key Value for list keystone.Lis
 }); 
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1]+'... was load!')
+// console.log(__filename.split("vs-workspace")[1]+'... was load!')
 
 Gallery.add({
 	name: { type: String, required: true },

@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1]+'... was load!')
+// console.log(__filename.split("vs-workspace")[1]+'... was load!')
 
 /**
  * Enquiry Model

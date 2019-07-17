@@ -8,7 +8,7 @@ var Types = keystone.Field.Types;
 var User = new keystone.List('User');
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1] + '... was load!')
+// console.log(__filename.split("vs-workspace")[1] + '... was load!')
 
 User.add({
 	name: {

@@ -1,13 +1,10 @@
 var keystone = require('keystone');
 var async = require('async');
 
-// DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1] + '... was loaded!')
-
 exports = module.exports = function (req, res) {
 
 	// DEBUG STATEMENT
-	console.log(__filename.split("vs-workspace")[1] + '... was executed!')
+	// console.log(__filename.split("vs-workspace")[1] + '... was executed!')
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;

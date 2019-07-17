@@ -10,7 +10,7 @@
 var _ = require('lodash');
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1]+'... was executed!')
+// console.log(__filename.split("vs-workspace")[1]+'... was executed!')
 
 /**
 	Initialises the standard view locals

@@ -27,7 +27,7 @@ keystone.init({
 	'user model': 'User',
 });
 // DEBUG STATEMENTS
-console.log(__filename.split("vs-workspace")[1]+'... was executed!')
+// console.log(__filename.split("vs-workspace")[1]+'... was executed!')
 
 // Load your project's Models
 keystone.import('models');

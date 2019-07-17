@@ -24,7 +24,7 @@ var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname); // (__dirname) Allows for quick relative directory routing
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1] + '... was executed!')
+// console.log(__filename.split("vs-workspace")[1] + '... was executed!')
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);

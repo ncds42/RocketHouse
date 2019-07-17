@@ -9,7 +9,7 @@ var Types = keystone.Field.Types;
 var Note = new keystone.List('Note'); 
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1]+'... was load!')
+// console.log(__filename.split("vs-workspace")[1]+'... was load!')
 
 Note.add({
 	name: { type: String, required: true },

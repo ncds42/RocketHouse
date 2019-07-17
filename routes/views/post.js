@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 // DEBUG STATEMENT
-console.log(__filename.split("vs-workspace")[1] + '... was loaded!')
+// console.log(__filename.split("vs-workspace")[1] + '... was loaded!')
 
 exports = module.exports = function (req, res) {
 
