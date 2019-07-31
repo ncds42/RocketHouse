@@ -1,0 +1,335 @@
+@import "mixins.scss";
+
+.container {
+	@media(min-width:1300px) {
+		max-width: 1270px;
+	}
+
+	@media(min-width:1400px) {
+		max-width: 1370px;
+	}
+
+	@media(min-width:1500px) {
+		max-width: 1470px;
+	}
+}
+
+.jumbotron {
+	background-color: #FFFFFF;
+	border: 0px solid;
+	font-family: 'Khand', sans-serif;
+}
+
+$displayHeight: 50rem;
+
+.displayContainer .display {
+	width: 140rem;
+	margin: auto;
+}
+
+
+
+.bookCoverCol {
+
+	@include media-breakpoint-down(sm) {
+		padding: 45px;
+	}
+
+	@include media-breakpoint-down(md) {
+		order: 13;
+	}
+
+	@include media-breakpoint-down(lg) {
+		margin: auto;
+		margin-top: 15px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(3.5)
+	}
+}
+
+.bookContentCol {
+	@include media-breakpoint-down(sm) {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(8);
+		@include make-col-offset(0.5);
+	}
+}
+
+
+img#bookCover {
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.664) 0px 10px 32.5px 0px;
+}
+
+form#buyBookForm {
+	margin-top: 30px;
+	text-align: center;
+	// display:block;
+}
+
+input#buyBook {
+	width: 50%;
+	font-size: 2rem;
+
+	@include media-breakpoint-between(lg, xl) {
+		font-size: 1.7rem;
+	}
+
+	@media(max-width:393px){
+		font-size:120%;
+	}
+
+	font-family: 'Khand',
+	sans-serif;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	transition: 0.7s;
+	// display:block;
+}
+
+#buyBook:hover {
+	color: cyan;
+	background-color: black;
+	border-color: white;
+	border-radius: 100px;
+}
+
+
+#bookContent {
+	// width:350rem;
+}
+
+.bookTitle {
+	display: inline;
+	margin-top: 0px;
+	font-weight: 700;
+	font-size: 5rem;
+	color: #f22527;
+	text-shadow: 1px 1px 1px black;
+}
+
+#bookTitle1 {
+	margin-top: 0px;
+	font-weight: 700;
+}
+
+#bookTitle2 {
+	margin-top: 0px;
+	font-weight: 200;
+}
+
+#bookTitle3 {
+	margin-top: 0px;
+	font-weight: 700;
+}
+
+
+p.bookDescription {
+	font-weight: 400;
+	color: black;
+	justify-content: baseline;
+	font-size: 2rem;
+	text-shadow: none;
+}
+
+.read-more {
+	font-size: 2rem;
+	text-decoration: underline;
+	line-height: 30px;
+	font-weight: 400;
+	text-shadow: none;
+	display: block;
+}
+
+hr {
+	border-width: 2px;
+	border-color: rgba(0, 0, 0, 0.096);
+}
+
+div#buyBookContainer {
+	margin: auto !important;
+	margin-bottom: 50px;
+
+	display: block;
+}
+
+
+
+
+/* Blog Part ******************************************************************************8*/
+
+#blogContainer {
+	padding: 0px; // TEST ??
+	margin: 0px; // TEST ??
+	display: flex;
+	position: relative;
+}
+
+$blogContentPercent:70%;
+
+#blogContentContainer {
+	position: absolute;
+	width: $blogContentPercent - 5%;
+	margin: 10px 10px 10px 10px;
+	background-color: rgba(218, 202, 202, 0.034);
+}
+
+.blogPostHeader {
+	background-color: black;
+	height: 6rem;
+	width: 100%;
+	font-size: 3rem;
+	color: white;
+	padding-top: 1rem;
+	padding-left: 2rem;
+	position: relative;
+}
+
+#blogContinue {
+	display: inline;
+	font-size: 1.6rem;
+	padding: 0px;
+}
+
+
+.signUpContainer {
+	margin: auto;
+	width: 40%;
+}
+
+.signUpForm {
+	border: 0px;
+}
+
+.signUpHeader {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-weight: 200;
+}
+
+.signUpButton {
+	margin: auto;
+	margin-bottom: 3rem;
+	display: block;
+	background-color: white;
+	font-size: 2rem;
+	padding: 1rem 2rem;
+	border: 2px solid black;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+.signUpButton:hover {
+	color: cyan;
+	background-color: black;
+	border-color: white;
+	border-radius: 100px;
+}
+
+.lastRecentPost {
+	font-size: 100px;
+
+	@include media-breakpoint-up(xs) {
+		margin: 1rem 1.5rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(7);
+	}
+}
+
+.recentPosts {
+
+	@include media-breakpoint-up(xs) {
+		margin: auto;
+	}
+
+	@include media-breakpoint-up(md){
+		width:60vw;
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(4);
+		@include make-col-offset(0.5);
+		
+	}
+
+	margin-top:10px;
+}
+
+.latestPostHeader {
+	background-color: black;
+	height: 6rem;
+	width: 100%;
+	font-size: 3rem;
+	color: white;
+	padding-top: 1rem;
+	padding-left: 2rem;
+	position: relative;
+	margin-right: 100px;
+}
+
+.postTitle {
+	display: block;
+	font-size: 6rem;
+	text-decoration: underline;
+	color: black;
+	transition: 0.5s;
+
+}
+
+.postTitle:hover {
+	color: rgb(23, 23, 144);
+}
+
+.contentWrapper {
+	width: 90%;
+	margin: auto;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.postPublishedDate {
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+.latestPostImage {
+	// float:right;
+	width: 100%;
+	margin-bottom: 4rem;
+}
+
+p.blogContent {
+	font-size: 2.2rem;
+	font-weight: 400;
+	text-indent: 3rem;
+}
+
+#otherContainer {
+	// width: 100% - $blogContentPercent;
+	margin: 0px 10px 10px 10px;
+	position: absolute;
+	right: 0;
+}
+
+
+.recentPostLinks {
+	display: block;
+	font-size: 3rem;
+	font-weight: 100;
+	padding-left: 20px;
+}
+
+#firstRecentPost {
+	margin-top: 10px;
+}

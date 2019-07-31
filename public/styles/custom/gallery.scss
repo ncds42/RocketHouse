@@ -1,0 +1,30 @@
+.carousel {
+	width: 80vw;
+
+	@include media-breakpoint-up(lg) {
+		width: 60vw;
+	}
+
+	@include media-breakpoint-up(xl) {
+		width: 40vw;
+	}
+
+	margin:auto;
+}
+
+.galleryContainer {
+	height: 1200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	background-color: rgb(241, 10, 10);
+	position: fixed;
+	top: 30vh;
+	width: 5vw;
+	height: 80vh;
+
+	@include media-breakpoint-up(xl) {
+	}
+
+}

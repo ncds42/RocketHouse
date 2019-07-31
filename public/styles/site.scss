@@ -1,27 +1,12 @@
 // Fonts Custom
 @import "site/font.scss";
 
-// Functions Custom
-@function pow($number, $exponent) {
-	$value: 1;
-
-	@if $exponent>0 {
-		@for $i from 1 through $exponent {
-			$value: $value * $number;
-		}
-	}
-
-	@return $value;
-}
-
 // Bootstrap
 // =========
 
 // Bootstrap can be removed entirely by deleting this line.
 
 @import "bootstrap/bootstrap";
-
-.container {}
 
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
@@ -45,17 +30,24 @@
 
 @import "custom/global.scss";
 
+// STYLING ********************************************************************
+
 @import "custom/banner.scss";
 
 @import "custom/navigationBar.scss";
 
-@import "custom/body.scss";
-
-@import "custom/about.css";
-
-@import "custom/viewPost.css";
+@import "custom/index.scss";
 
 @import "custom/blog.scss";
 
+@import "custom/viewPost.scss";
+
 @import "custom/exwifenotes.scss";
+
+@import "custom/gallery.scss";
+
+@import "custom/about.scss";
+
+
+// Bootstrap 4 Custom Modifications
 

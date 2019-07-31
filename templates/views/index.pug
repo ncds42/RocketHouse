@@ -13,11 +13,18 @@ mixin post(post)
 			p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
 block content
-	.container-fluid: .jumbotron 
-		.display
-			img#bookCover(src="/images/cover.png")
-			div#bookContent
-					span#bookTitle1.bookTitle Marriage Advice 
+	.container#bookContent
+		.row
+			.bookCoverCol
+				img#bookCover(src="/images/cover.png")
+				form#buyBookForm(
+				action="https://www.amazon.com/Marriage-Advice-Divorced-Guy-Ex-Wife/dp/1733130500/ref=sr_1_4?crid=9L8GXH544A1O&keywords=marriage+advice+from+a+divorced+guy&qid=1562484121&s=gateway&sprefix=marriage+advice+from%2Caps%2C158&sr=8-4"
+				method="post"
+				target="_blank"
+				)
+					input#buyBook(type="submit" value="BUY \"DIVORCED GUY\"")
+			.bookContentCol
+				span#bookTitle1.bookTitle Marriage Advice 
 					span#bookTitle2.bookTitle from a 
 					span#bookTitle3.bookTitle DIVORCED GUY
 					hr(style="margin-top:0px;")
@@ -32,60 +39,107 @@ block content
 					p.bookDescription.
 						You’ll see my notes shaded in gray. Not my choice, but apparently I don’t make all the decisions here, even though I should.
 						Love has been on the run and tough to grasp, but I have garnered much wisdom through the twists and turns along my journey. I say wisdom because men will appreciate the term, while most women will say, “If he’s so wise, why is he divorced?”
-					a#linkToBook.read-more Read More
-					hr
-		.container-fluid#buyBookContainer
-			form#buyBookForm(
-					action="https://www.amazon.com/Marriage-Advice-Divorced-Guy-Ex-Wife/dp/1733130500/ref=sr_1_4?crid=9L8GXH544A1O&keywords=marriage+advice+from+a+divorced+guy&qid=1562484121&s=gateway&sprefix=marriage+advice+from%2Caps%2C158&sr=8-4"
-					method="post"
-					target="_blank"
-				)
-
-				input#buyBook(type="submit" value="BUY \"DIVORCED GUY\"")
-		hr(style="border-width:2px;margin-top:70px;")
-		if data.posts.results.length
-			.container-fluid#blogContainer
-				#blogContentContainer
+					//- a#linkToBook.read-more(href="/book") Read More
+		hr(style="margin-top:2rem;")
+		.row
+			.col
+				.signUpContainer
+					form.signUpForm(action='https://tinyletter.com/Karimsb-4'
+							method-'POST'
+							target='popupwindow'
+							onsubmit="window.open('https://tinyletter.com/Karimsb-4', 'popupwindow', 'scrollbars=yes,background-color:white,width=800,height=600');return true")
+						h3.signUpHeader Sign Up for Newsletter to receive updates and free goodies!
+						button.signUpButton(type='submit') SUBSCRIBE
+		hr(style="margin-top:2rem;")
+		.row
+			if data.posts.results.length
+				.lastRecentPost
 					-latestPost = data.posts.results[0];
-					.latestPostHeader.blogPostHeader LATEST POST
-					.contentWrapper
-						div
-							a.postTitle.content(href='/blog/post/'+latestPost.slug)= latestPost.title
-						p.postPublishedDate.content= latestPost._.publishedDate.format('MMMM Do, YYYY')
-						img.latestPostImage.content(src=latestPost._.image.fit(400,400))
-						p.blogContent.content= latestPost.content.brief
-							a#blogContinue.read-more.content(
+					div.latestPostHeader LATEST POST
+					div.contentWrapper
+						a.postTitle(href='/blog/post/'+latestPost.slug)= latestPost.title
+						p.postPublishedDate= latestPost._.publishedDate.format('MMMM Do, YYYY')
+						img.latestPostImage(src=latestPost._.image.fit(400,400))
+						p.blogContent= latestPost.content.brief
+							a#blogContinue.read-more(
 								href="/blog/post/"+latestPost.slug
 							) ...read more
-				#otherContainer
-					#recentPosts
-						.recentPostHeader.blogPostHeader RECENT POSTS
-						each post, i in data.posts.results
-							if(i > 0)
-								if (i==1)
-									a.recentPostLinks#firstRecentPost(
-										href='/blog/post/'+post.slug)= post.title
-									hr
-								else if (i < 6)
-									a.recentPostLinks(
-										href='/blog/post/'+post.slug)= post.title
-									hr
-					#signUpContainer
-						.subscribeContainer
-							form(action='https://tinyletter.com/Karimsb-4'
-								method='POST'
-								target='popupwindow'
-								onsubmit="window.open('https://tinyletter.com/Karimsb-4', 'popupwindow', 'scrollbars=yes,background-color:white,width=800,height=600');return true")
-								div.header
-									h2.subscribe SUBSCRIBE
-									p.signUpHeader Sign up with your email to receive advice and free, awesome, goodies
-									.emailInputDiv
-										label.emailLabel
-										input.emailInput(
-											type="text"
-											placeholder="  Email Address")
-										input.submit(
-											type="submit"
-											value="SIGN UP"
-										)
-									.signUpButtonDiv
+				.recentPosts
+					.recentPostHeader.blogPostHeader RECENT POSTS
+					each post, i in data.posts.results
+						if(i > 0)
+							if (i==1)
+								a.recentPostLinks#firstRecentPost(
+									href='/blog/post/'+post.slug)= post.title
+								hr
+							else if (i < 6)
+								a.recentPostLinks(
+									href='/blog/post/'+post.slug)= post.title
+								hr
+
+
+	//- 			#otherContainer
+	//- 				#recentPosts
+	//- 					.recentPostHeader.blogPostHeader RECENT POSTS
+	//- 					each post, i in data.posts.results
+	//- 						if(i > 0)
+	//- 							if (i==1)
+	//- 								a.recentPostLinks#firstRecentPost(
+	//- 									href='/blog/post/'+post.slug)= post.title
+	//- 								hr
+	//- 							else if (i < 6)
+	//- 								a.recentPostLinks(
+	//- 									href='/blog/post/'+post.slug)= post.title
+	//- 								hr
+	//- 	if data.posts.results.length
+	//- 		.container-fluid#blogContainer
+	//- 			#blogContentContainer
+	//- 				-latestPost = data.posts.results[0];
+	//- 				.latestPostHeader.blogPostHeader LATEST POST
+	//- 				.contentWrapper
+	//- 					div
+	//- 						a.postTitle.content(href='/blog/post/'+latestPost.slug)= latestPost.title
+	//- 					p.postPublishedDate.content= latestPost._.publishedDate.format('MMMM Do, YYYY')
+	//- 					img.latestPostImage.content(src=latestPost._.image.fit(400,400))
+	//- 					p.blogContent.content= latestPost.content.brief
+	//- 						a#blogContinue.read-more.content(
+	//- 							href="/blog/post/"+latestPost.slug
+	//- 						) ...read more
+//- 				#signUpContainer
+//- 					.subscribeContainer
+//- 						form(action='https://tinyletter.com/Karimsb-4'
+//- 							method='POST'
+//- 							target='popupwindow'
+//- 							onsubmit="window.open('https://tinyletter.com/Karimsb-4', 'popupwindow', 'scrollbars=yes,background-color:white,width=800,height=600');return true")
+//- 							div.header
+//- 								h2.subscribe SUBSCRIBE
+//- 								p.signUpHeader Sign up with your email to receive advice and free, awesome, goodies
+//- 								.emailInputDiv
+//- 									label.emailLabel
+//- 									input.emailInput(
+//- 										type="text"
+//- 										placeholder="  Email Address")
+//- 									input.submit(
+//- 										type="submit"
+//- 										value="SIGN UP"
+//- 									)
+//- 								.signUpButtonDiv
+	//- 				#signUpContainer
+	//- 					.subscribeContainer
+	//- 						form(action='https://tinyletter.com/Karimsb-4'
+	//- 							method='POST'
+	//- 							target='popupwindow'
+	//- 							onsubmit="window.open('https://tinyletter.com/Karimsb-4', 'popupwindow', 'scrollbars=yes,background-color:white,width=800,height=600');return true")
+	//- 							div.header
+	//- 								h2.subscribe SUBSCRIBE
+	//- 								p.signUpHeader Sign up with your email to receive advice and free, awesome, goodies
+	//- 								.emailInputDiv
+	//- 									label.emailLabel
+	//- 									input.emailInput(
+	//- 										type="text"
+	//- 										placeholder="  Email Address")
+	//- 									input.submit(
+	//- 										type="submit"
+	//- 										value="SIGN UP"
+	//- 									)
+	//- 								.signUpButtonDiv

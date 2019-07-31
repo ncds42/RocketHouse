@@ -1,59 +1,47 @@
-$linkScale : 80px;
-
-.headerSpacer {
-	display: none;
-	// width: 99vw;
-	background-color: black;
-}
-
-#headerSpacer1 {
-	height: 2px;
-	margin-bottom: 4px;
-}
-
-#headerSpacer2 {
-	height: 1px;
-}
+$navbarHeight: 80px; // This will adjust height of navbar
 
 .navbar {
-	height: $linkScale;
-	background-color:rgb(243, 243, 243);
-	border: 0px;
+	background-color: #f3f3f3;
+	min-height: $navbarHeight;
 }
 
-.linksBarContainerFluid {
-	height: $linkScale;
-	text-align: center;
+.navbar-toggle {
+	margin-top: ($navbarHeight - 34px) / 2;
+	padding: 9px 10px !important
 }
 
-#linksBar {
-	display: inline-block;
-	height: $linkScale;
+$line-height: 28px;
+
+@media (min-width:768px) {
+	.navbar-nav>li>a {
+		// padding-top: ($navbarHeight - $line-height) / 2;
+		// padding-bottom: ($navbarHeight - $line-height) / 2;
+		line-height: $line-height;
+	}
 }
 
-.navbar-nav>li>a {
-	// ul element for links
-	line-height: $linkScale*(2/5);
-	padding: $linkScale*(3/10);
-	font-size: $linkScale*(1/3);
-	font-family: 'Khand', sans-serif;
-	font-weight: 600;
+#nav-item {
+	font-size: 4rem;
+	margin-right: 4rem;
+	
+
+	// height:$navbarHeight'
+}
+
+#nav-link {
 	text-transform: uppercase;
+	text-decoration: solid;
+	-webkit-font-smoothing: subpixel-antialiased;
+	color: rgb(116, 115, 115);
+	font-weight: 600;
+	font-size: 26.66px;
+	transition: 0.5s;
 }
 
-.navButton{
-	transition:0.5s;
+#nav-item.active > #nav-link{
+	color:black;
 }
 
-li.navButton:hover{
-	background-color:black;
-	a.links:hover{
-		color:white;
-	}
-}
-
-li.active:hover{
-	a.links:hover{
-		color:#555;
-	}
+#nav-link:hover {
+	color: white;
 }

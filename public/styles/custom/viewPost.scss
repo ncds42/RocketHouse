@@ -1,16 +1,33 @@
-.blogPostTitle{
-    text-decoration:underline;
+.backToBlog{
+    text-align:left;
+    padding-left:1rem;
+}
+
+.post{
+    font-family: 'Libre Baskerville', sans-serif;
+    margin: auto;
     text-align:center;
 }
 
-h5.blogPostPublishedDate{
-    text-align:center;
+.postTitle{
+    text-decoration: underline;
+    font-size:2.5rem;
 }
 
-img.img-responsive{
-    margin:auto;
-    margin-bottom:3rem;
-    margin-top:3rem;
+.postPublished{
+    font-size:1.1rem;
 }
 
-// h
+.postImage{
+    margin-top:2rem;
+    width:80%;
+}
+
+.postContent{
+    text-indent:5rem;
+    text-align: justify;
+    padding:0 2rem;
+    @include media-breakpoint-down(xs){
+        word-spacing: -2px;
+    }
+}

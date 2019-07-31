@@ -12,7 +12,7 @@
     "lodash": "^4.13.1",
     "node-sass": "4.5.0",
     "node-sass-middleware": "^0.11.0",
-    "popper": "^1.0.1",
+    "popper.js": "^1.15.0",
     "pug": "^2.0.3",
     "react": "^16.8.6"
   },
@@ -23,6 +23,6 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "sudo service mongod start & node keystone.js"
+    "start": "sudo service mongod start & nodemon keystone.js"
   }
 }

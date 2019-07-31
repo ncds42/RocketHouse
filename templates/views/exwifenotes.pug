@@ -4,8 +4,6 @@ extends ../layouts/default
 
 block intro
     script. 
-        var i = 0
-        var speed = 50
         var txt = "Ex-Wife here, and no, they’re not funny at all. Your sense of humor was always warped. And "
                     + "please, don’t tell me people are actually going to buy this book. I mean, why would anyone pay "
                     + "to read your dribble? "
@@ -155,18 +153,36 @@ block intro
                     + "this box to talk about everything you did wrong. Shoot, why do these boxes keep getting "
                     + "smaller? Are you doing this on purpose?” "
         // Length of text is 11034
+        var i = 0
+        var speed = 50
+        var userControl = false;
 
+       
+          
+        var counter = 0;
+        document.addEventListener("click", function(){
+               ++counter;
+               if(counter == 2){
+                  document.getElementById('exWifeTitle').innerHTML = 'Click Again to Fast-Forward' 
+               }
+               if(counter == 3){
+                   i = txt.length;
+                   document.getElementById("exWifeNotes").innerHTML = txt;
+                   document.getElementById('exWifeTitle').innerHTML = 'Notes from the Ex' 
+               }
+           })
         function typeWriter(){
            var x = document.getElementById("exButton")
+           
            x.style.display = "none"
            if (i < txt.length) {
-                document.getElementById("exWifeNotes").innerHTML += txt.charAt(i);
+                document.getElementById("exWifeNotes").innerHTML += txt.charAt(i);              
                 i++;
                 setTimeout(typeWriter, speed);
             } 
         }
     .container
-        button#exButton(onclick="typeWriter()") Click To Hear from the Ex-Wife
+        button#exButton(onclick="typeWriter()") Click To Read from the Ex-Wife
         h1#exWifeTitle Notes from the Ex
         hr(style='border-color:purple;border-width:5px;border-style:dashed;')
         p#exWifeNotes(style='')
