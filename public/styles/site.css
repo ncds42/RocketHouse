@@ -7527,7 +7527,8 @@ p#exWifeNotes {
 
 .aboutContent {
   font-family: 'Libre Baskerville', sans-serif;
-  text-indent: 20px; }
+  text-indent: 20px;
+  font-size: 1.5rem; }
 
 .karimPhoto {
   display: inline-block;
