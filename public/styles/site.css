@@ -7490,16 +7490,29 @@ img.pull-right {
   color: black; }
 
 #exWifeTitle {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   text-align: center;
   font-size: 5rem;
   font-weight: 700; }
 
-p#exWifeNotes {
-  font-family: 'Dancing Script', cursive;
+pre#exWifeNotes {
+  font-family: "Dancing Script", cursive;
   font-size: 3rem;
   text-indent: 5rem;
-  font-weight: 400; }
+  font-weight: 400;
+  overflow-x: auto;
+  /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  /* width: 99%; */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
 
 .carousel {
   width: 80vw;
