@@ -4403,17 +4403,11 @@ a.close.disabled {
   padding: 0.5rem 0.75rem;
   color: #212529; }
 
-.carousel {
-  position: relative; }
-
-.carousel.pointer-event {
-  touch-action: pan-y; }
-
-.carousel-inner {
+.galleryImage .carousel-inner {
   position: relative;
   width: 100%;
   overflow: hidden; }
-  .carousel-inner::after {
+  .galleryImage .carousel-inner::after {
     display: block;
     clear: both;
     content: ""; }
@@ -7532,6 +7526,10 @@ p#target {
 
 .carousel {
   width: 80vw;
+  position: relative;
+  left: auto;
+  right: auto;
+  padding-bottom: 0;
   margin: auto; }
   @media (min-width: 992px) {
     .carousel {
@@ -7545,11 +7543,56 @@ p#target {
 
 .carousel-control-prev,
 .carousel-control-next {
-  background-color: #f10a0a;
   position: fixed;
   top: 30vh;
   width: 5vw;
-  height: 80vh; }
+  height: 30vh;
+  margin: 0px 10px; }
+  @media (min-width: 992px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+      height: 50vh; } }
+
+.carousel .carousel-item img {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+  min-width: auto;
+  width: auto; }
+  @media (max-width: 767.98px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 400px; } }
+  @media (min-width: 576px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 520px; } }
+  @media (min-width: 768px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 770px; } }
+  @media (min-width: 992px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 1200px; } }
+  @media (max-width: 460px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 350px; } }
+  @media (max-width: 400px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 330px; } }
+  @media (max-width: 360px) {
+    .carousel .carousel-item img {
+      max-height: 400px;
+      max-width: 200px; } }
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
 .aboutHeader {
   text-align: center; }

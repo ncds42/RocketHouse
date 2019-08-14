@@ -11,14 +11,7 @@
 // 5. .carousel-item-next.carousel-item-left and .carousel-item-prev.carousel-item-right
 //    is the upcoming slide in transition.
 
-.carousel {
-  position: relative;
-}
-
-.carousel.pointer-event {
-  touch-action: pan-y;
-}
-
+.galleryImage
 .carousel-inner {
   position: relative;
   width: 100%;

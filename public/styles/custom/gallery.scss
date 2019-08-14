@@ -1,6 +1,9 @@
 .carousel {
 	width: 80vw;
-
+	position: relative;
+	left: auto;
+	right: auto;
+	padding-bottom: 0;
 	@include media-breakpoint-up(lg) {
 		width: 60vw;
 	}
@@ -9,7 +12,7 @@
 		width: 40vw;
 	}
 
-	margin:auto;
+	margin: auto;
 }
 
 .galleryContainer {
@@ -18,13 +21,62 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-	background-color: rgb(241, 10, 10);
 	position: fixed;
 	top: 30vh;
 	width: 5vw;
-	height: 80vh;
+	height: 30vh;
+	margin: 0px 10px;
 
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(lg) {
+		height:50vh;
+	}
+}
+
+.carousel .carousel-item img {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 100%;
+	min-width: auto;
+	width: auto;
+
+	
+	
+	@include media-breakpoint-down(sm){
+		max-height: 400px;
+		max-width: 400px;
+	}
+	@include media-breakpoint-up(sm) {
+		max-height: 400px;
+		max-width: 520px;
 	}
 
+	@include media-breakpoint-up(md) {
+		max-height: 400px;
+		max-width: 770px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		max-height: 400px;
+		max-width: 1200px;
+	}
+	@media(max-width:460px){
+		max-height: 400px;
+		max-width: 350px;
+	}
+	@media(max-width:400px){
+		max-height: 400px;
+		max-width: 330px;
+	}
+	@media(max-width:360px){
+		max-height: 400px;
+		max-width: 200px;
+	}
+}
+
+.carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
