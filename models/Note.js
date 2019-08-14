@@ -13,7 +13,8 @@ var Note = new keystone.List('Note');
 
 Note.add({
 	name: { type: String, required: true },
-	content: {type: Types.Text},
+	content: {type: Types.Html, wysiwyg:true,},
+	textArea: {type: Types.Textarea }
 });
 
 Note.register();

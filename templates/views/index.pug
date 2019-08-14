@@ -31,13 +31,13 @@ block content
 					p.bookDescription. 
 						How is your marriage?
 					p.bookDescription.
-						Is it the stuff of legends? Or is your love barely hanging on amid the negative forces pulling it apart? Do your neighbors wink and say, “Give them a year”? Are you heading towards divorce?
+						&nbsp Is it the stuff of legends? Or is your love barely hanging on amid the negative forces pulling it apart? Do your neighbors wink and say, “Give them a year”? Are you heading towards divorce?
 						This book will help you tame the monsters challenging your marriage and your love life. The advice given here will turn your love affair into the unimaginable, and will empower you to revel in a fulfilling and enduring love.
 						First things first: We must address the (Insert huge animal here) in the room. You may have looked at the cover of this book and said, “Right. Why should I take marriage advice from a divorced guy?”
 						Yes, I am a divorced guy whose marriage lasted 16 years. Yes, I have been single since 2001. Yes, I have had three or four committed relationships, exact number escapes me. And yes, on occasion I sleep with laundry and eat over the sink.
-						You did that while we were married. Karim’s Ex-Wife here. 
-					p.bookDescription.
-						You’ll see my notes shaded in gray. Not my choice, but apparently I don’t make all the decisions here, even though I should.
+						You did that while we were married.  
+					p.bookDescription(style="color: gray;").
+						&nbsp Karim’s Ex-Wife here. You’ll see my notes shaded in gray. Not my choice, but apparently I don’t make all the decisions here, even though I should.
 						Love has been on the run and tough to grasp, but I have garnered much wisdom through the twists and turns along my journey. I say wisdom because men will appreciate the term, while most women will say, “If he’s so wise, why is he divorced?”
 					//- a#linkToBook.read-more(href="/book") Read More
 		hr(style="margin-top:2rem;")
@@ -60,10 +60,11 @@ block content
 						a.postTitle(href='/blog/post/'+latestPost.slug)= latestPost.title
 						p.postPublishedDate= latestPost._.publishedDate.format('MMMM Do, YYYY')
 						img.latestPostImage(src=latestPost._.image.fit(400,400))
-						p.blogContent= latestPost.content.brief
-							a#blogContinue.read-more(
-								href="/blog/post/"+latestPost.slug
-							) ...read more
+						.blogContent
+							p.blogContent!= latestPost.content.brief
+								a#blogContinue.read-more(
+									href="/blog/post/"+latestPost.slug
+								) ...read more
 				.recentPosts
 					.recentPostHeader.blogPostHeader RECENT POSTS
 					each post, i in data.posts.results

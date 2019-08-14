@@ -7389,7 +7389,7 @@ div#buyBookContainer {
   width: 100%;
   margin-bottom: 4rem; }
 
-p.blogContent {
+.blogContent {
   font-size: 2.2rem;
   font-weight: 400;
   text-indent: 3rem; }
@@ -7465,7 +7465,8 @@ img.pull-right {
 .postContent {
   text-indent: 5rem;
   text-align: justify;
-  padding: 0 2rem; }
+  padding: 0 3rem;
+  font-size: 1.5rem; }
   @media (max-width: 575.98px) {
     .postContent {
       word-spacing: -2px; } }

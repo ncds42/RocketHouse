@@ -26,7 +26,8 @@
 .postContent{
     text-indent:5rem;
     text-align: justify;
-    padding:0 2rem;
+    padding:0 3rem;
+    font-size: 1.5rem;
     @include media-breakpoint-down(xs){
         word-spacing: -2px;
     }

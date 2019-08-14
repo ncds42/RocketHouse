@@ -14,7 +14,7 @@ var keystone = require('keystone');
 
 keystone.init({
 	'name': 'Karims Blog',
-	'brand': 'ChauhanINC',
+	'brand': 'Blog Control Dashboard',
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
@@ -49,11 +49,8 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	posts: ['posts', 'post-categories'],
-	galleries: 'galleries',
-	enquiries: 'enquiries',
+	posts: ['posts'],
 	users: 'users',
-	notes: 'notes',
 });
 
 // Start Keystone to connect to your database and initialise the web server
