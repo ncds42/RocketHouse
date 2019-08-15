@@ -7202,6 +7202,11 @@ img#headerFace {
     max-width: 66.66667%;
     margin-left: 4.16667%; } }
 
+.fourReasons {
+  color: #ff7d70;
+  box-shadow: none;
+  text-shadow: none; }
+
 img#bookCover {
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.664) 0px 10px 32.5px 0px; }
