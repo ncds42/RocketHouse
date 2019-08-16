@@ -7152,6 +7152,15 @@ img#headerFace {
 #nav-link:hover {
   color: white; }
 
+.UNPAID {
+  color: #0004ff;
+  font-size: 29vw;
+  position: absolute;
+  z-index: 10;
+  top: 19vh;
+  left: 18vw;
+  text-shadow: 10px 10px 20px black; }
+
 @media (min-width: 1300px) {
   .container {
     max-width: 1270px; } }
