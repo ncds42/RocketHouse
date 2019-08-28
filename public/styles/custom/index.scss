@@ -1,13 +1,13 @@
 @import "mixins.scss";
-.UNPAID{
-	color:rgb(0, 4, 255);
-	font-size: 29vw;
-	position:absolute;
-	z-index: 10;
-	top:19vh;
-	left:18vw;
-	text-shadow:10px 10px 20px black;
-}
+// .UNPAID{
+// 	color:rgb(0, 4, 255);
+// 	font-size: 29vw;
+// 	position:absolute;
+// 	z-index: 10;
+// 	top:19vh;
+// 	left:18vw;
+// 	text-shadow:10px 10px 20px black;
+// }
 .container {
 	@media(min-width:1300px) {
 		max-width: 1270px;
