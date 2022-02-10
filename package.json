@@ -10,7 +10,7 @@
     "jquery": "^3.4.1",
     "keystone": "^4.1.0",
     "lodash": "^4.17.15",
-    "node-sass": "4.5.0",
+    "node-sass": "7.0.0",
     "node-sass-middleware": "^0.11.0",
     "popper.js": "^1.15.0",
     "pug": "^2.0.3",
